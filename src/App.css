@@ -1,0 +1,51 @@
+* {
+    margin: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+
+body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 42px;
+}
+
+
+#search-text {
+  border-radius: 20px;
+  border: snow;
+  padding: 10px;
+
+}
+
+p, h3 {
+  color: snow;
+}
+
+.allBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
