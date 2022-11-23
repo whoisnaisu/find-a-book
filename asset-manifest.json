@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/find-a-book/static/css/main.86f19bec.css",
-    "main.js": "/find-a-book/static/js/main.b4bba512.js",
+    "main.css": "/find-a-book/static/css/main.1675904f.css",
+    "main.js": "/find-a-book/static/js/main.b7cc9730.js",
     "static/js/787.835c6cbd.chunk.js": "/find-a-book/static/js/787.835c6cbd.chunk.js",
+    "static/media/loupe-svgrepo-com.svg": "/find-a-book/static/media/loupe-svgrepo-com.2c73351e30f3f01582fc80597ad7939a.svg",
     "index.html": "/find-a-book/index.html",
-    "main.86f19bec.css.map": "/find-a-book/static/css/main.86f19bec.css.map",
-    "main.b4bba512.js.map": "/find-a-book/static/js/main.b4bba512.js.map",
+    "main.1675904f.css.map": "/find-a-book/static/css/main.1675904f.css.map",
+    "main.b7cc9730.js.map": "/find-a-book/static/js/main.b7cc9730.js.map",
     "787.835c6cbd.chunk.js.map": "/find-a-book/static/js/787.835c6cbd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86f19bec.css",
-    "static/js/main.b4bba512.js"
+    "static/css/main.1675904f.css",
+    "static/js/main.b7cc9730.js"
   ]
 }
