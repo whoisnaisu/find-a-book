@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react';
 import axios from "axios";
 
 function App() {
-  const [ result, setResult ] = useState([]);
+  const [result, setResult] = useState([]);
 
   const debounce = (func) => {
     let timer;
@@ -30,28 +30,27 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Head"><h1>Find a Book</h1></div>
-      <div className='allBox'>
+      <div className="head"><h1>Find a Book</h1></div>
+      <div className='all-box'>
         <input
-        type="search"
-        id="search-text"
-        name="search-text"
-        placeholder="search for your stuff here!"
-        onChange={optimizedFn}/>
-        <div><p>Search results:</p></div> 
-       {  result.map ( (item, index) => {
+          className="search-input"
+          placeholder="search for your stuff here!"
+          onChange={optimizedFn} />
+        <div><p>Search results:</p></div>
+        {result.map((item, index) => {
           return (
-            <div className="result" key={index}>
-            <div className="lists">
-              <h3> {item.volumeInfo.title} </h3>
-            </div>
-          </div> )})
+            <div className="results" key={index}>
+              <div className="list">
+                <a className="item-link" href={item.selfLink}>
+                  <h3> {item.volumeInfo.title}</h3>
+                </a>
+              </div>
+            </div>)
+        })
         }
       </div>
     </div>
   );
-
-
 };
 
 export default App;
