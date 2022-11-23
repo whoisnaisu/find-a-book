@@ -36,12 +36,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="picture" onClick={() => { alert("Search the book you would like to know!") }} ><img className="magnifying-glass" src={glass} alt="magnifying glass" /></div>
+      <div className="picture" onClick={() => { alert("Search a book you would like to know!") }} ><img className="magnifying-glass" src={glass} alt="magnifying glass" /></div>
       <div className="head"><h1>Find a Book</h1></div>
       <div className='all-box'>
         <input
           className="search-input"
-          placeholder="search for your stuff here!"
+          placeholder="search here!"
           onChange={optimizedFn} />
         <div><p>Search results will show here:</p></div>
         <div className="results" >
@@ -49,7 +49,7 @@ function App() {
             return (
               <div className="item-list" key={item.id}>
                 <a className="item-link" href={item.volumeInfo.previewLink}>
-                  {item.volumeInfo.title} <span>by</span> {item.volumeInfo.authors} <p>(Published on: {item.volumeInfo.publishedDate || "no info available"})</p>
+                  {item.volumeInfo.title} by {item.volumeInfo.authors || "no author info available"} <p>(Published on: {item.volumeInfo.publishedDate || "no published info available"})</p>
                 </a>
               </div>)
           })
