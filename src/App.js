@@ -41,7 +41,7 @@ function App() {
           return (
             <div className="results" key={index}>
               <div className="list">
-                <a className="item-link" href={item.selfLink}>
+                <a className="item-link" href={item.volumeInfo.previewLink}>
                   <h3> {item.volumeInfo.title}</h3>
                 </a>
               </div>
