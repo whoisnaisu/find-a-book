@@ -28,8 +28,9 @@ body {
 }
 
 .magnifying-glass {
-  animation: jello 2s ease 0s 1 normal forwards;
+  animation: drop 2s ease 1.8s 1 normal backwards;
 }
+
 .magnifying-glass:hover {
   scale: 110%;
   cursor: help;
@@ -37,12 +38,13 @@ body {
 
 .head {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  animation: shaking 3s ease 1s infinite normal forwards;
 }
 
 h1 {
+  margin: 3px;
   text-align: center;
   color: white;
   font-size: 42px;
@@ -77,6 +79,7 @@ h1 {
   justify-content: center;
   flex-direction: column;
 }
+
 p {
   color: snow;
   font-style: italic;
@@ -104,32 +107,40 @@ p {
   position: absolute;
 }
 
-@keyframes shaking {
-  0%,
-  100% {
-    transform: translateX(0%);
-    transform-origin: 50% 50%;
-  }
+.f {
+  animation: drop 2s ease 0s 1 normal backwards;
+}
 
-  15% {
-    transform: translateX(-30px) rotate(-6deg);
-  }
+.i {
+  animation: drop 2s ease-in-out 0.2s 1 normal backwards;
+}
 
-  30% {
-    transform: translateX(15px) rotate(6deg);
-  }
+.n {
+  animation: drop 2s ease-in-out 0.4s 1 normal backwards;
+}
 
-  45% {
-    transform: translateX(-15px) rotate(-3.6deg);
-  }
+.d {
+  animation: drop 2s ease-out 0.6s 1 normal backwards;
+}
 
-  60% {
-    transform: translateX(9px) rotate(2.4deg);
-  }
+.a {
+  animation: drop 2s linear 0.8s 1 normal backwards;
+}
 
-  75% {
-    transform: translateX(-6px) rotate(-1.2deg);
-  }
+.b {
+  animation: drop 1.5s linear 1s 1 normal backwards;
+}
+
+.o1 {
+  animation: drop 1.5s linear 1.2s 1 normal backwards;
+}
+
+.o2 {
+  animation: drop 1.5s linear 1.4s 1 normal backwards;
+}
+
+.k {
+  animation: drop 1.5s linear 1.6s 1 normal backwards;
 }
 
 @keyframes jello {
@@ -159,5 +170,51 @@ p {
 
   100% {
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes drop {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-13rem);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
