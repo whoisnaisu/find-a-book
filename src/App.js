@@ -21,10 +21,18 @@ function App() {
 
   const handleSearchText = async (event) => {
     try {
-      const searchText = event.target.value
-      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchText}`)
-      console.log(response.data.items);
-      setResult(response.data.items)
+      const searchText = event.target.value || null;
+      const cancelToken = axios.CancelToken.source();
+
+      if (searchText === null) {
+        setResult([])
+      } else {
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchText}`, { cancelToken: cancelToken.token })
+        setResult(response.data.items)
+      }
+      return () => {
+        cancelToken.cancel();
+      }
     } catch (error) {
       setIsError(!isError)
       const reload = () => window.location.reload()
